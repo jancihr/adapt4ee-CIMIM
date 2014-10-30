@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a4eecim:ListOfEquipments xmlns:a4eebim="http://www.adapt4ee.eu/2012/schema/bim/"
+	xmlns:a4eebpm="http://www.adapt4ee.eu/2012/schema/bpm/" xmlns:a4eecim="http://www.adapt4ee.eu/2012/schema/cim/"
+	xmlns:a4eedev="http://www.adapt4ee.eu/2012/schema/device/"
+	xmlns:a4eeevent="http://www.adapt4ee.eu/2012/schema/event/"
+	xmlns:a4eekpi="http://www.adapt4ee.eu/2012/schema/kpi/" xmlns:a4eeuni="http://www.adapt4ee.eu/2012/schema/units/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.adapt4ee.eu/2012/schema/cim/ adapt4eeCIM.xsd http://www.adapt4ee.eu/2012/schema/units/ adapt4eeUnits.xsd http://www.adapt4ee.eu/2012/schema/bim/ adapt4eeBIM.xsd http://www.adapt4ee.eu/2012/schema/device/ adapt4eeDevice.xsd http://www.adapt4ee.eu/2012/schema/bpm/ adapt4eeBPM.xsd http://www.adapt4ee.eu/2012/schema/event/ adapt4eeEvent.xsd http://www.adapt4ee.eu/2012/schema/kpi/ adapt4eeKPI.xsd ">
+	<EquipmentDevice>
+		<id>equipmentImport1</id>
+		<type>type</type>
+		<position>
+			<x>
+				<value>0.0</value>
+				<unit>Kilometers</unit>
+			</x>
+			<y>
+				<value>0.0</value>
+				<unit>Kilometers</unit>
+			</y>
+			<z>
+				<value>0.0</value>
+				<unit>Kilometers</unit>
+			</z>
+		</position>
+		<sensorRef>sensorRef</sensorRef>
+		<gbXMLRef>gbXMLRef</gbXMLRef>
+	</EquipmentDevice>
+	<EquipmentDevice>
+		<id>equipmentIport2</id>
+		<type>type</type>
+		<position>
+			<x>
+				<value>0.0</value>
+				<unit>Kilometers</unit>
+			</x>
+			<y>
+				<value>0.0</value>
+				<unit>Kilometers</unit>
+			</y>
+			<z>
+				<value>0.0</value>
+				<unit>Kilometers</unit>
+			</z>
+		</position>
+		<sensorRef>sensorRef</sensorRef>
+		<gbXMLRef>gbXMLRef</gbXMLRef>
+	</EquipmentDevice>
+</a4eecim:ListOfEquipments>

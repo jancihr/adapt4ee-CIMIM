@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<stx:transform version="1.0"
+	xmlns:stx="http://stx.sourceforge.net/2002/ns" xmlns:ns2="http://www.adapt4ee.eu/2012/schema/cim/"
+	pass-through="all" strip-space="yes">
+
+	<stx:variable name="x" select="0" />
+	<stx:variable name="z" select="0" />
+	<stx:variable name="y" select="0" />
+	<stx:variable name="t" select="0" />
+
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/x/unit" />
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/y/unit" />
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/z/unit" />
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/x/value"><stx:assign name="x" select="." /></stx:template>
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/y/value"><stx:assign name="y" select="." /></stx:template>
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/z/value"><stx:assign name="z" select="." /></stx:template>
+
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/timeStamp"><stx:assign name="t" select="." /></stx:template>
+
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition"><stx:process-children /></stx:template>
+
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/x"><stx:process-children /></stx:template>
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/y"><stx:process-children /></stx:template>
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory/possition/z"><stx:process-children /></stx:template>
+
+	<stx:template
+		match="/ns2:MeasurementFile/events/event/OccupantTrajectory/occupantTrajectory"><stx:process-children /><stx:element name="a"><stx:attribute name="t" select="$t"></stx:attribute><stx:attribute name="x" select="$x"></stx:attribute><stx:attribute name="y" select="$y"></stx:attribute><stx:attribute name="z" select="$z"></stx:attribute></stx:element></stx:template>
+</stx:transform>

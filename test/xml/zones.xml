@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a4eecim:ListOfZones xmlns:a4eebim="http://www.adapt4ee.eu/2012/schema/bim/" xmlns:a4eebpm="http://www.adapt4ee.eu/2012/schema/bpm/" xmlns:a4eecim="http://www.adapt4ee.eu/2012/schema/cim/" xmlns:a4eedev="http://www.adapt4ee.eu/2012/schema/device/" xmlns:a4eeevent="http://www.adapt4ee.eu/2012/schema/event/" xmlns:a4eekpi="http://www.adapt4ee.eu/2012/schema/kpi/" xmlns:a4eeuni="http://www.adapt4ee.eu/2012/schema/units/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.adapt4ee.eu/2012/schema/cim/ adapt4eeCIM.xsd ">
+  <zone>1</zone>
+  <zone>2</zone>
+  <zone>3</zone>
+</a4eecim:ListOfZones>

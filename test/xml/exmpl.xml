@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<p1:BuildingImport xmlns:p1="http://www.adapt4ee.eu/2012/schema/cim/">
+
+  <building>
+    <id>1234567890</id>
+    <space>
+      <id>Space 114</id>
+    </space>
+    <space>
+      <id>Space 105</id>
+      <sensorDevice>
+        <sensorTypeRef>Smart Sensor</sensorTypeRef>
+        <sensorNameID>4509</sensorNameID>
+        <gatewayID>929</gatewayID>
+        <id>21859</id>
+        <sensorMeasure>Temperature</sensorMeasure>
+        <sensorPossition>
+          <x>-5.62093</x>
+          <y>-23.4648</y>
+          <z>0</z>
+        </sensorPossition>
+      </sensorDevice>
+    </space>
+    <space>
+      <id>Space 103</id>
+    </space>
+    <buildingType>Office</buildingType>
+  </building>
+
+</p1:BuildingImport>

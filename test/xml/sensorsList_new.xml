@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<p1:SensorType xmlns:p1="http://www.adapt4ee.eu/2012/schema/device/">
+
+  <sensorType>
+    <id>1</id>
+    <name>Kinect</name>
+    <sensorIconPath>./images/kinect.png</sensorIconPath>
+    <measuredValue>Occupancy</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>2</id>
+    <name>EnergyMeter</name>
+    <sensorIconPath>./images/e.png</sensorIconPath>
+    <measuredValue>ActiveEnergy</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>3</id>
+    <name>CurrentMeter</name>
+    <sensorIconPath>./images/C.png</sensorIconPath>
+    <measuredValue>Current</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>4</id>
+    <name>VoltageMeter</name>
+    <sensorIconPath>./images/V.png</sensorIconPath>
+    <measuredValue>Voltage</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>5</id>
+    <name>iPointT</name>
+    <sensorIconPath>./images/T.png</sensorIconPath>
+    <measuredValue>Temperature</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>6</id>
+    <name>iPointH</name>
+    <sensorIconPath>./images/H.png</sensorIconPath>
+    <measuredValue>RelativeHumidity</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>7</id>
+    <name>iPointCO2</name>
+    <sensorIconPath>./images/CO2.png</sensorIconPath>
+    <measuredValue>CO2</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>8</id>
+    <name>RFID</name>
+    <sensorIconPath>./images/rfid.png</sensorIconPath>
+    <measuredValue>Occupancy</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>9</id>
+    <name>PowerPlug</name>
+    <sensorIconPath>./images/plug.png</sensorIconPath>
+    <measuredValue>ActiveEnergy</measuredValue>
+  </sensorType>
+
+</p1:SensorType>

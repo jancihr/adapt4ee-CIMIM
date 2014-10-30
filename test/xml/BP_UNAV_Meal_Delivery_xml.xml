@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The elements in the overall schema that relate to the other parts are 
+	now shown in here, the file will validate against the schema for BPM -->
+<BPMImport>
+	<process>
+		<id>81924</id>
+		<name>BP UNAV Meal Delivery (SKELETON) (BPMN 2.0)</name>
+		<activity>
+			<id>81946</id>
+			<name>Collect patient dietary requirements</name>
+			<usedSpaceType>PatientRoomHospitalOrHealthcare</usedSpaceType>
+			<usedSpaceType>Day Care Cubicle</usedSpaceType>
+			<roleInvolved>
+				<roleRef>DayCare Hospital Nurses´aid</roleRef>
+				<averageNumberOfPersons><!--FIXME: analysing the role links in WE, currently 
+						as part of annotation. -->
+					6
+				</averageNumberOfPersons>
+				<occupantWorkIntensity>
+					<value><!--Not captured in BPM, annotated in sample model -->
+						1.8
+					</value>
+					<unit>WattPerPerson</unit>
+				</occupantWorkIntensity>
+				<clothing>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						2.9
+					</value>
+					<unit>Clo</unit>
+				</clothing>
+			</roleInvolved>
+			<requiredEnvironment><!--All value here are made available through annotation. -->
+				<minTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						23
+					</value>
+					<unit>F</unit>
+				</minTemperature>
+				<maxTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>F</unit>
+				</maxTemperature>
+				<minHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>Percent</unit>
+				</minHumidity>
+				<maxHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>Percent</unit>
+				</maxHumidity>
+				<minAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						0
+					</value>
+					<unit>MetersPerSecond</unit>
+				</minAirflow>
+				<maxAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						1
+					</value>
+					<unit>MetersPerSecond</unit>
+				</maxAirflow>
+				<minLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						4
+					</value>
+					<unit>Footcandles</unit>
+				</minLuminance>
+				<maxLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						10
+					</value>
+					<unit>Footcandles</unit>
+				</maxLuminance>
+				<minCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>PartsPerMillion</unit>
+				</minCO2>
+				<maxCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+					</value>
+					<unit>PartsPerMillion</unit>
+				</maxCO2>
+			</requiredEnvironment>
+			<interruptable>true</interruptable>
+			<waitingTime>P00Y000DT00H00M00S</waitingTime>
+			<executionTime>P00Y000DT00H30M00S</executionTime>
+			<transportTime>P00Y000DT00H00M00S</transportTime>
+			<frequency><!--iterations: per day, applying a calculation of 240 working 
+					days per year. 20 working days per month, current implementation does not 
+					consider path likelihoods -> only sequence values are appropriate -->
+				<iterations />
+				<!--Aggregated cycle time of the process is used, as the result for 1 
+					iteration, current implementation does not consider path likelihoods -> only 
+					sequence values are appropriate -->
+				<duration>PYDTHMS</duration>
+			</frequency>
+			<isBusinessActivity>true</isBusinessActivity>
+			<!--In case there is no prev or next activity in the sequence, left empty. 
+				Current implementation does not considered control flows. -->
+			<previousActivityRef />
+			<nextActivityRef>81934</nextActivityRef>
+		</activity>
+		<activity>
+			<id>81949</id>
+			<name>Food delivery and collection</name>
+			<usedSpaceType>Day Care Cubicle</usedSpaceType>
+			<roleInvolved>
+				<roleRef>DayCare Hospital Nurses´aid</roleRef>
+				<averageNumberOfPersons><!--FIXME: analysing the role links in WE, currently 
+						as part of annotation. -->
+					6
+				</averageNumberOfPersons>
+				<occupantWorkIntensity>
+					<value><!--Not captured in BPM, annotated in sample model -->
+						1.8
+					</value>
+					<unit>WattPerPerson</unit>
+				</occupantWorkIntensity>
+				<clothing>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						2.9
+					</value>
+					<unit>Clo</unit>
+				</clothing>
+			</roleInvolved>
+			<requiredEnvironment><!--All value here are made available through annotation. -->
+				<minTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						23
+					</value>
+					<unit>F</unit>
+				</minTemperature>
+				<maxTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>F</unit>
+				</maxTemperature>
+				<minHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>Percent</unit>
+				</minHumidity>
+				<maxHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>Percent</unit>
+				</maxHumidity>
+				<minAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						0
+					</value>
+					<unit>MetersPerSecond</unit>
+				</minAirflow>
+				<maxAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						1
+					</value>
+					<unit>MetersPerSecond</unit>
+				</maxAirflow>
+				<minLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						4
+					</value>
+					<unit>Footcandles</unit>
+				</minLuminance>
+				<maxLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						10
+					</value>
+					<unit>Footcandles</unit>
+				</maxLuminance>
+				<minCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>PartsPerMillion</unit>
+				</minCO2>
+				<maxCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+					</value>
+					<unit>PartsPerMillion</unit>
+				</maxCO2>
+			</requiredEnvironment>
+			<interruptable>true</interruptable>
+			<waitingTime>P00Y000DT00H45M00S</waitingTime>
+			<executionTime>P00Y000DT00H40M00S</executionTime>
+			<transportTime>P00Y000DT00H00M00S</transportTime>
+			<frequency><!--iterations: per day, applying a calculation of 240 working 
+					days per year. 20 working days per month, current implementation does not 
+					consider path likelihoods -> only sequence values are appropriate -->
+				<iterations />
+				<!--Aggregated cycle time of the process is used, as the result for 1 
+					iteration, current implementation does not consider path likelihoods -> only 
+					sequence values are appropriate -->
+				<duration>PYDTHMS</duration>
+			</frequency>
+			<isBusinessActivity>true</isBusinessActivity>
+			<!--In case there is no prev or next activity in the sequence, left empty. 
+				Current implementation does not considered control flows. -->
+			<previousActivityRef>81928</previousActivityRef>
+			<nextActivityRef>81952</nextActivityRef>
+		</activity>
+		<activity>
+			<id>81952</id>
+			<name>Return trays and trolley to lift</name>
+			<usedSpaceType>Day Care Cubicle</usedSpaceType>
+			<roleInvolved>
+				<roleRef>DayCare Hospital Nurses´aid</roleRef>
+				<averageNumberOfPersons><!--FIXME: analysing the role links in WE, currently 
+						as part of annotation. -->
+					6
+				</averageNumberOfPersons>
+				<occupantWorkIntensity>
+					<value><!--Not captured in BPM, annotated in sample model -->
+						1.8
+					</value>
+					<unit>WattPerPerson</unit>
+				</occupantWorkIntensity>
+				<clothing>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						2.9
+					</value>
+					<unit>Clo</unit>
+				</clothing>
+			</roleInvolved>
+			<requiredEnvironment><!--All value here are made available through annotation. -->
+				<minTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						23
+					</value>
+					<unit>F</unit>
+				</minTemperature>
+				<maxTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>F</unit>
+				</maxTemperature>
+				<minHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>Percent</unit>
+				</minHumidity>
+				<maxHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>Percent</unit>
+				</maxHumidity>
+				<minAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						0
+					</value>
+					<unit>MetersPerSecond</unit>
+				</minAirflow>
+				<maxAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						1
+					</value>
+					<unit>MetersPerSecond</unit>
+				</maxAirflow>
+				<minLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						4
+					</value>
+					<unit>Footcandles</unit>
+				</minLuminance>
+				<maxLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						10
+					</value>
+					<unit>Footcandles</unit>
+				</maxLuminance>
+				<minCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>PartsPerMillion</unit>
+				</minCO2>
+				<maxCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+					</value>
+					<unit>PartsPerMillion</unit>
+				</maxCO2>
+			</requiredEnvironment>
+			<interruptable>true</interruptable>
+			<waitingTime>P00Y000DT00H00M00S</waitingTime>
+			<executionTime>P00Y000DT00H15M00S</executionTime>
+			<transportTime>P00Y000DT00H00M00S</transportTime>
+			<frequency><!--iterations: per day, applying a calculation of 240 working 
+					days per year. 20 working days per month, current implementation does not 
+					consider path likelihoods -> only sequence values are appropriate -->
+				<iterations />
+				<!--Aggregated cycle time of the process is used, as the result for 1 
+					iteration, current implementation does not consider path likelihoods -> only 
+					sequence values are appropriate -->
+				<duration>PYDTHMS</duration>
+			</frequency>
+			<isBusinessActivity>true</isBusinessActivity>
+			<!--In case there is no prev or next activity in the sequence, left empty. 
+				Current implementation does not considered control flows. -->
+			<previousActivityRef>81949</previousActivityRef>
+			<nextActivityRef />
+		</activity>
+		<activity>
+			<id>81958</id>
+			<name>Meal Preparation (basement)</name>
+			<requiredEnvironment><!--All value here are made available through annotation. -->
+				<minTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						23
+					</value>
+					<unit>F</unit>
+				</minTemperature>
+				<maxTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>F</unit>
+				</maxTemperature>
+				<minHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>Percent</unit>
+				</minHumidity>
+				<maxHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>Percent</unit>
+				</maxHumidity>
+				<minAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						0
+					</value>
+					<unit>MetersPerSecond</unit>
+				</minAirflow>
+				<maxAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						1
+					</value>
+					<unit>MetersPerSecond</unit>
+				</maxAirflow>
+				<minLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						4
+					</value>
+					<unit>Footcandles</unit>
+				</minLuminance>
+				<maxLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						10
+					</value>
+					<unit>Footcandles</unit>
+				</maxLuminance>
+				<minCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>PartsPerMillion</unit>
+				</minCO2>
+				<maxCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+					</value>
+					<unit>PartsPerMillion</unit>
+				</maxCO2>
+			</requiredEnvironment>
+			<interruptable>true</interruptable>
+			<waitingTime>P00Y000DT00H00M00S</waitingTime>
+			<executionTime>P00Y000DT00H30M00S</executionTime>
+			<transportTime>P00Y000DT00H00M00S</transportTime>
+			<frequency><!--iterations: per day, applying a calculation of 240 working 
+					days per year. 20 working days per month, current implementation does not 
+					consider path likelihoods -> only sequence values are appropriate -->
+				<iterations />
+				<!--Aggregated cycle time of the process is used, as the result for 1 
+					iteration, current implementation does not consider path likelihoods -> only 
+					sequence values are appropriate -->
+				<duration>PYDTHMS</duration>
+			</frequency>
+			<isBusinessActivity>true</isBusinessActivity>
+			<!--In case there is no prev or next activity in the sequence, left empty. 
+				Current implementation does not considered control flows. -->
+			<previousActivityRef>81934</previousActivityRef>
+			<nextActivityRef>81928</nextActivityRef>
+		</activity>
+		<activity>
+			<id>81934</id>
+			<name>Send list to kitchen</name>
+			<usedSpaceType>Daycare Admission point</usedSpaceType>
+			<usedEquipment>
+				<equipmentTypeRef>PC 1</equipmentTypeRef>
+				<numberOf><!--Not clear how defined. -->
+				</numberOf>
+				<numberOfUses><!--Not clear how defined, currently the activity is used 
+						as a basis, on a daily basis. Current implementation does not consider likelihoods 
+						on paths -->
+				</numberOfUses>
+				<timeOfUse><!--Not clear how defined, currently the activity's execution 
+						time is used -->
+					P00Y000DT00H05M00S
+				</timeOfUse>
+				<equipmentIntensityMode>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						40
+					</value>
+					<unit><!--Not captured in BPM, annoted in sample model -->
+						Percent
+					</unit>
+				</equipmentIntensityMode>
+			</usedEquipment>
+			<roleInvolved>
+				<roleRef>DayCare Hospital Nurses´aid</roleRef>
+				<averageNumberOfPersons><!--FIXME: analysing the role links in WE, currently 
+						as part of annotation. -->
+					6
+				</averageNumberOfPersons>
+				<occupantWorkIntensity>
+					<value><!--Not captured in BPM, annotated in sample model -->
+						1.8
+					</value>
+					<unit>WattPerPerson</unit>
+				</occupantWorkIntensity>
+				<clothing>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						2.9
+					</value>
+					<unit>Clo</unit>
+				</clothing>
+			</roleInvolved>
+			<requiredEnvironment><!--All value here are made available through annotation. -->
+				<minTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						23
+					</value>
+					<unit>F</unit>
+				</minTemperature>
+				<maxTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>F</unit>
+				</maxTemperature>
+				<minHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>Percent</unit>
+				</minHumidity>
+				<maxHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>Percent</unit>
+				</maxHumidity>
+				<minAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						0
+					</value>
+					<unit>MetersPerSecond</unit>
+				</minAirflow>
+				<maxAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						1
+					</value>
+					<unit>MetersPerSecond</unit>
+				</maxAirflow>
+				<minLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						4
+					</value>
+					<unit>Footcandles</unit>
+				</minLuminance>
+				<maxLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						10
+					</value>
+					<unit>Footcandles</unit>
+				</maxLuminance>
+				<minCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>PartsPerMillion</unit>
+				</minCO2>
+				<maxCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+					</value>
+					<unit>PartsPerMillion</unit>
+				</maxCO2>
+			</requiredEnvironment>
+			<interruptable>true</interruptable>
+			<waitingTime>P00Y000DT00H00M00S</waitingTime>
+			<executionTime>P00Y000DT00H05M00S</executionTime>
+			<transportTime>P00Y000DT00H00M00S</transportTime>
+			<frequency><!--iterations: per day, applying a calculation of 240 working 
+					days per year. 20 working days per month, current implementation does not 
+					consider path likelihoods -> only sequence values are appropriate -->
+				<iterations />
+				<!--Aggregated cycle time of the process is used, as the result for 1 
+					iteration, current implementation does not consider path likelihoods -> only 
+					sequence values are appropriate -->
+				<duration>PYDTHMS</duration>
+			</frequency>
+			<isBusinessActivity>true</isBusinessActivity>
+			<!--In case there is no prev or next activity in the sequence, left empty. 
+				Current implementation does not considered control flows. -->
+			<previousActivityRef>81946</previousActivityRef>
+			<nextActivityRef>81958</nextActivityRef>
+		</activity>
+		<activity>
+			<id>81928</id>
+			<name>Collect meal trolley from lift</name>
+			<usedSpaceType>Cleaning staff room</usedSpaceType>
+			<usedSpaceType>Day Care Corridor</usedSpaceType>
+			<roleInvolved>
+				<roleRef>DayCare Hospital Nurses´aid</roleRef>
+				<averageNumberOfPersons><!--FIXME: analysing the role links in WE, currently 
+						as part of annotation. -->
+					6
+				</averageNumberOfPersons>
+				<occupantWorkIntensity>
+					<value><!--Not captured in BPM, annotated in sample model -->
+						1.8
+					</value>
+					<unit>WattPerPerson</unit>
+				</occupantWorkIntensity>
+				<clothing>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						2.9
+					</value>
+					<unit>Clo</unit>
+				</clothing>
+			</roleInvolved>
+			<requiredEnvironment><!--All value here are made available through annotation. -->
+				<minTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						23
+					</value>
+					<unit>F</unit>
+				</minTemperature>
+				<maxTemperature>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>F</unit>
+				</maxTemperature>
+				<minHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						45
+					</value>
+					<unit>Percent</unit>
+				</minHumidity>
+				<maxHumidity>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>Percent</unit>
+				</maxHumidity>
+				<minAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						0
+					</value>
+					<unit>MetersPerSecond</unit>
+				</minAirflow>
+				<maxAirflow>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						1
+					</value>
+					<unit>MetersPerSecond</unit>
+				</maxAirflow>
+				<minLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						4
+					</value>
+					<unit>Footcandles</unit>
+				</minLuminance>
+				<maxLuminance>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						10
+					</value>
+					<unit>Footcandles</unit>
+				</maxLuminance>
+				<minCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+						56
+					</value>
+					<unit>PartsPerMillion</unit>
+				</minCO2>
+				<maxCO2>
+					<value><!--Not captured in BPM, annoted in sample model -->
+					</value>
+					<unit>PartsPerMillion</unit>
+				</maxCO2>
+			</requiredEnvironment>
+			<interruptable>true</interruptable>
+			<waitingTime>P00Y000DT00H00M00S</waitingTime>
+			<executionTime>P00Y000DT00H05M00S</executionTime>
+			<transportTime>P00Y000DT00H00M00S</transportTime>
+			<frequency><!--iterations: per day, applying a calculation of 240 working 
+					days per year. 20 working days per month, current implementation does not 
+					consider path likelihoods -> only sequence values are appropriate -->
+				<iterations />
+				<!--Aggregated cycle time of the process is used, as the result for 1 
+					iteration, current implementation does not consider path likelihoods -> only 
+					sequence values are appropriate -->
+				<duration>PYDTHMS</duration>
+			</frequency>
+			<isBusinessActivity>true</isBusinessActivity>
+			<!--In case there is no prev or next activity in the sequence, left empty. 
+				Current implementation does not considered control flows. -->
+			<previousActivityRef>81958</previousActivityRef>
+			<nextActivityRef>81949</nextActivityRef>
+		</activity>
+	</process>
+</BPMImport>

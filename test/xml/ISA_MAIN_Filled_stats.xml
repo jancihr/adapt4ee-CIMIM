@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:EventsStats xmlns:ns2="http://www.adapt4ee.eu/2012/schema/cim/">
+	<minTime>2013-10-10T00:00:00</minTime>
+	<maxTime>2014-04-17T00:00:00</maxTime>
+	<allEventsNumber>6729895</allEventsNumber>
+	<eventNumbers>
+		<trajectories>626049</trajectories>
+		<trajectoryPoints>13733820</trajectoryPoints>
+		<occupantMoved>20117</occupantMoved>
+		<equipmentUsed>0</equipmentUsed>
+		<spaceEnvironmentChange>0</spaceEnvironmentChange>
+		<externalEnvironmentChanged>0</externalEnvironmentChanged>
+		<HVACChange>0</HVACChange>
+		<LightingChange>0</LightingChange>
+		<SpaceOccupancy>2970508</SpaceOccupancy>
+		<SpaceMovement>0</SpaceMovement>
+		<SpaceOccupantPossitions>2970508</SpaceOccupantPossitions>
+		<Current>0</Current>
+		<Voltage>0</Voltage>
+		<Energy>142713</Energy>
+	</eventNumbers>
+	<eventTimes>
+		<OccupantTrajectoryTime>
+			<minTime>2013-10-11T13:02:51.6</minTime>
+			<maxTime>2014-04-16T10:35:28.384555</maxTime>
+		</OccupantTrajectoryTime>
+		<occupantMovedTime>
+			<minTime>2013-10-10T07:45:39.742</minTime>
+			<maxTime>2014-04-16T10:37:54.307</maxTime>
+		</occupantMovedTime>
+		<equipmentUsedTime />
+		<spaceEnvironmentChangeTime />
+		<externalEnvironmentChangedTime />
+		<HVACChangeTime />
+		<LightingChangeTime />
+		<SpaceOccupancyTime>
+			<minTime>2013-10-11T13:03:21.674</minTime>
+			<maxTime>2014-04-16T10:35:59.184562</maxTime>
+		</SpaceOccupancyTime>
+		<SpaceMovementTime />
+		<SpaceOccupantPossitionsTime>
+			<minTime>2013-10-11T13:03:21.674</minTime>
+			<maxTime>2014-04-16T10:35:59.184562</maxTime>
+		</SpaceOccupantPossitionsTime>
+		<CurrentTime />
+		<VoltageTime />
+		<EnergyTime>
+			<minTime>2013-10-10T00:00:00</minTime>
+			<maxTime>2014-04-17T00:00:00</maxTime>
+		</EnergyTime>
+	</eventTimes>
+</ns2:EventsStats>

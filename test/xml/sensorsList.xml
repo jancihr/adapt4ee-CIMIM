@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<p1:SensorType xmlns:p1="http://www.adapt4ee.eu/2012/schema/device/" >
+
+  <sensorType> 
+    <id>1</id>
+    <name>Kinect</name>
+    
+	<sensorIconPath>./images/kinect.png</sensorIconPath>
+  <measuredValue>Occupancy</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>2</id>
+    <name>RFID Reader</name>
+    
+	<sensorIconPath>./images/rfidreader.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>3</id>
+    <name>AirMonitor</name>
+    
+	<sensorIconPath>./images/airmonitor.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>4</id>
+    <name>RFID Active Identity Badge</name>
+    
+	<sensorIconPath>./images/rfid.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+  
+  <sensorType>
+    <id>5</id>
+    <name>iHub (ZigBee)</name>
+    
+	<sensorIconPath>./images/ihub_2.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+
+  <sensorType>
+    <id>6</id>
+    <name>iHub (RF868/RS485)</name>
+    
+	<sensorIconPath>./images/ihub_1.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+  
+  <sensorType>
+    <id>7</id>
+    <name>Weather Station</name>
+    
+	<sensorIconPath>./images/weatherstation.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+
+ <sensorType>
+    <id>8</id>
+    <name>Clamp</name>
+    
+	<sensorIconPath>./images/clamp.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+
+    <sensorType>
+    <id>9</id>
+    <name>Power Plug</name>
+    
+	<sensorIconPath>./images/powerplug.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+  
+  <sensorType>
+    <id>10</id>
+    <name>iMeterRail (ISA)</name>
+    
+	<sensorIconPath>./images/imeterrail.png</sensorIconPath>
+	<measuredValue>Electricity</measuredValue>
+  </sensorType>
+
+
+</p1:SensorType>

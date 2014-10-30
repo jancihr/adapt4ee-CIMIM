@@ -1,0 +1,317 @@
+# baseURI: http://adapt4ee.eu/demo
+
+@prefix demo:    <http://adapt4ee.eu/demo#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://adapt4ee.eu/demo>
+      rdf:type owl:Ontology ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+demo:Building
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Location .
+
+demo:Corridor
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Space .
+
+demo:Device
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+demo:Doctor
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Occupant .
+
+demo:DomainModel
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+demo:Equipment
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Device .
+
+demo:EquipmentUsedEvent
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Event .
+
+demo:Event
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+demo:Location
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+demo:MovementSensor
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Sensor .
+
+demo:Nurse
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Occupant .
+
+demo:Occupant
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+demo:OccupantMovementEvent
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Event .
+
+demo:Office
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Space .
+
+demo:Patient
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Occupant .
+
+demo:RFIdReader
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Sensor .
+
+demo:Role
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+demo:Room
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Space .
+
+demo:Sensor
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Device .
+
+demo:SkeletonActivity
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+demo:Space
+      rdf:type owl:Class ;
+      rdfs:subClassOf demo:Location .
+
+demo:admissionOfficeDoorReader
+      rdf:type demo:RFIdReader ;
+      demo:hasEvent demo:admissionOfficeRFIDEvent ;
+      demo:partOf demo:oncologyAdmissionOffice .
+
+demo:admissionOfficeKinect01
+      rdf:type demo:MovementSensor ;
+      demo:hasEvent demo:admissionOfficeKinectEvent01 ;
+      demo:partOf demo:oncologyAdmissionOffice .
+
+demo:admissionOfficeKinect02
+      rdf:type demo:MovementSensor ;
+      demo:hasEvent demo:admissionOfficeKinectEvent02 ;
+      demo:partOf demo:oncologyAdmissionOffice .
+
+demo:admissionOfficeKinectEvent01
+      rdf:type demo:OccupantMovementEvent .
+
+demo:admissionOfficeKinectEvent02
+      rdf:type demo:OccupantMovementEvent .
+
+demo:admissionOfficePC
+      rdf:type demo:Equipment ;
+      demo:partOf demo:oncologyAdmissionOffice .
+
+demo:admissionOfficePrinter
+      rdf:type demo:Equipment ;
+      demo:hasEvent demo:printerUsedEvent ;
+      demo:partOf demo:oncologyAdmissionOffice .
+
+demo:admissionOfficeRFIDEvent
+      rdf:type demo:OccupantMovementEvent .
+
+demo:callNextPatient
+      rdf:type demo:SkeletonActivity ;
+      demo:roleInvolved demo:oncologyPatient , demo:oncologyNurse ;
+      demo:useSpace demo:oncologyAdmissionOffice .
+
+demo:check-inPatientInSystem
+      rdf:type demo:SkeletonActivity ;
+      demo:roleInvolved demo:oncologyNurse , demo:oncologyPatient ;
+      demo:useEquipment demo:admissionOfficePC ;
+      demo:useSpace demo:oncologyAdmissionOffice .
+
+demo:consultationOffcieDoorReader
+      rdf:type demo:RFIdReader ;
+      demo:hasEvent demo:consultationOfficeRFIDEvent ;
+      demo:partOf demo:oncologyConsultationOffice .
+
+demo:consultationOfficeKinect
+      rdf:type demo:MovementSensor ;
+      demo:hasEvent demo:consultationOfficeKinectEvent ;
+      demo:partOf demo:oncologyConsultationOffice .
+
+demo:consultationOfficeKinectEvent
+      rdf:type demo:OccupantMovementEvent .
+
+demo:consultationOfficePC
+      rdf:type demo:Equipment ;
+      demo:partOf demo:oncologyConsultationOffice .
+
+demo:consultationOfficeRFIDEvent
+      rdf:type demo:OccupantMovementEvent .
+
+demo:corridorKinect01
+      rdf:type demo:MovementSensor ;
+      demo:hasEvent demo:corridorKinectEvent01 ;
+      demo:partOf demo:oncologyCorridor .
+
+demo:corridorKinectEvent01
+      rdf:type demo:OccupantMovementEvent ;
+      demo:eventId "coridorEvent1"^^xsd:string .
+
+demo:demoDomain
+      rdf:type demo:DomainModel ;
+      demo:hasLocation demo:oncology8thFloor .
+
+demo:deviceId
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain demo:Device ;
+      rdfs:range xsd:string .
+
+demo:doctor01
+      rdf:type demo:Doctor ;
+      demo:hasRole demo:oncologyDoctor ;
+      demo:rfidID "doc_1"^^xsd:string .
+
+demo:eventId
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain demo:Event ;
+      rdfs:range xsd:string .
+
+demo:examinePatient
+      rdf:type demo:SkeletonActivity ;
+      demo:roleInvolved demo:oncologyDoctor , demo:oncologyPatient ;
+      demo:useEquipment demo:consultationOfficePC ;
+      demo:useSpace demo:oncologyConsultationOffice .
+
+demo:hasEquipment
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:Location ;
+      rdfs:range demo:Device .
+
+demo:hasEvent
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:Device ;
+      rdfs:range demo:Event .
+
+demo:hasLocation
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:DomainModel ;
+      rdfs:range demo:Location .
+
+demo:hasOccupant
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:Building ;
+      rdfs:range demo:Occupant .
+
+demo:hasRole
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:Occupant ;
+      rdfs:range demo:Role .
+
+demo:hasSpace
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:Building ;
+      rdfs:range demo:Space .
+
+demo:nurse01
+      rdf:type demo:Nurse ;
+      demo:hasRole demo:oncologyNurse .
+
+demo:oncology8thFloor
+      rdf:type demo:Building ;
+      demo:hasOccupant demo:nurse01 , demo:patient01 , demo:doctor01 ;
+      demo:hasSpace demo:oncologyCorridor , demo:oncologyConsultationOffice , demo:oncologyAdmissionOffice .
+
+demo:oncologyAdmissionOffice
+      rdf:type demo:Office ;
+      demo:hasEquipment demo:admissionOfficeKinect02 , demo:admissionOfficeKinect01 , demo:admissionOfficePrinter , demo:admissionOfficeDoorReader , demo:admissionOfficePC ;
+      demo:partOf demo:oncology8thFloor .
+
+demo:oncologyConsultationOffice
+      rdf:type demo:Office ;
+      demo:hasEquipment demo:consultationOfficeKinect , demo:consultationOffcieDoorReader , demo:consultationOfficePC ;
+      demo:partOf demo:oncology8thFloor .
+
+demo:oncologyCorridor
+      rdf:type demo:Corridor ;
+      demo:hasEquipment demo:corridorKinect01 ;
+      demo:partOf demo:oncology8thFloor .
+
+demo:oncologyDoctor
+      rdf:type demo:Role .
+
+demo:oncologyNurse
+      rdf:type demo:Role .
+
+demo:oncologyPatient
+      rdf:type demo:Role .
+
+demo:partOf
+      rdf:type owl:TransitiveProperty ;
+      rdfs:domain owl:Thing ;
+      rdfs:range owl:Thing .
+
+demo:patient01
+      rdf:type demo:Patient ;
+      demo:hasRole demo:oncologyPatient .
+
+demo:printAppointmentSheet
+      rdf:type demo:SkeletonActivity ;
+      demo:roleInvolved demo:oncologyNurse , demo:oncologyPatient ;
+      demo:useEquipment demo:admissionOfficePrinter ;
+      demo:useSpace demo:oncologyAdmissionOffice .
+
+demo:printerUsedEvent
+      rdf:type demo:EquipmentUsedEvent .
+
+demo:rfidID
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain demo:Occupant ;
+      rdfs:range xsd:string .
+
+demo:roleInvolved
+      rdf:type owl:SymmetricProperty ;
+      rdfs:domain demo:SkeletonActivity ;
+      rdfs:range demo:Role .
+
+demo:scheduleFollowUpAppointment
+      rdf:type demo:SkeletonActivity ;
+      demo:roleInvolved demo:oncologyPatient , demo:oncologyNurse ;
+      demo:useEquipment demo:admissionOfficePC ;
+      demo:useSpace demo:oncologyAdmissionOffice .
+
+demo:spaceEntered
+      rdf:type demo:OccupantMovementEvent .
+
+demo:spaceLeaved
+      rdf:type demo:OccupantMovementEvent .
+
+demo:takePatientIntoConsultationArea
+      rdf:type demo:SkeletonActivity ;
+      demo:roleInvolved demo:oncologyPatient , demo:oncologyNurse ;
+      demo:useSpace demo:oncologyCorridor .
+
+demo:useEquipment
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:SkeletonActivity ;
+      rdfs:range demo:Equipment .
+
+demo:useSpace
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain demo:SkeletonActivity ;
+      rdfs:range demo:Space .
+
+demo:writePerscription
+      rdf:type demo:SkeletonActivity ;
+      demo:roleInvolved demo:oncologyDoctor , demo:oncologyPatient ;
+      demo:useEquipment demo:consultationOfficePC ;
+      demo:useSpace demo:oncologyConsultationOffice .

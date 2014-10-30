@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a4eecim:Extensions xmlns:a4eecim="http://www.adapt4ee.eu/2012/schema/cim/">
+  <extension application="app1" referenceID="ref1" rootElementName="root1" scope="scope1" version="version1">
+    <properties name="propList1">
+    	<property name="name1" type="string">property1 in first ext</property>
+    	<property name="name2" type="string">property1 in first ext</property></properties>
+  </extension>
+  <extension application="app2" referenceID="ref2" rootElementName="el2" scope=""
+  	version=""><properties name="propList2">
+    	<property name="name1" type="string">property2 in second ext</property>
+    	<property name="name2" type="string">property2 in second ext</property></properties>
+  </extension>
+</a4eecim:Extensions>

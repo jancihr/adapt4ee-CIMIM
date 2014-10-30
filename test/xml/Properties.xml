@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a4eecim:Properties xmlns:a4eecim="http://www.adapt4ee.eu/2012/schema/cim/">
+  <property name="extraimport1" type="string">property</property>
+  <property name="extraimport2" type="string">property</property>
+  <property name="extraimport3" type="string">property</property>
+</a4eecim:Properties>
