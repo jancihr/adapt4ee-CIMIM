@@ -1,4 +1,4 @@
 adapt4ee-CIMIM
 ==============
 
-Common Information Model Integration Module
+Common Information Model Interface Module
