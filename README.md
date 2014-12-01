@@ -5,6 +5,6 @@ adapt4ee-CIMIM
 
 For more information about the adapt4ee CIM model and CIMIM services, follow the [adapt4ee](http://www.adapt4ee.eu) project page.
 
-Surce code is licensed under the GPL Version 3 license.
+Source code is licensed under the GPL Version 3 license.
 
 
